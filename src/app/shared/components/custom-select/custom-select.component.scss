@@ -1,0 +1,23 @@
+.drop-btn {
+  background-color: #00CBA9;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  ::ng-deep {
+    .fa-sort-down {
+      margin-bottom: 4px;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+::ng-deep {
+  .mat-menu-content {
+    max-height: 300px !important;
+  }
+}
+
+
+

@@ -1,0 +1,7 @@
+<div class="summary">
+  <h1 class="summary__small-font" *ngIf="volumeSum$ | async as totalVolume; else noVolumeFound"><span class="bold">Total Volume:</span> {{totalVolume | currency:'$'}}</h1>
+
+  <ng-template #noVolumeFound>
+    <a routerLink="/portfolio">Add Stocks!</a>
+  </ng-template>
+</div>

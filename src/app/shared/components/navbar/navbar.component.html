@@ -1,0 +1,10 @@
+<div class="navbar">
+  <h1 class="navbar__logo">My Portfolio</h1>
+
+  <div class="navbar_links">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle [routerLinkActiveOptions]="{exact:true}" [routerLinkActive]="'active-link'" routerLink="portfolio">Portfolio</mat-button-toggle>
+      <mat-button-toggle [routerLinkActive]="'active-link'" routerLink="portfolio/summary">Summary</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>

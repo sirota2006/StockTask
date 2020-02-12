@@ -1,0 +1,10 @@
+.stocks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+
+  app-stock-item {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="portfolio-layout">
+  <div class="portfolio-layout_wrapper portfolio-layout_wrapper--large">
+    <div class="portfolio-layout_wrapper_header">
+      <div class="portfolio-layout_wrapper_header_config">
+          <mat-form-field (input)="onUpdateRefreshRate($event)">
+            <input placeholder="Refresh rate (seconds)"
+                   matInput
+                   type="number"
+                   min="1.5"
+                   [(ngModel)]="refreshRate">
+          </mat-form-field>
+          <app-custom-select
+            class="portfolio-layout_wrapper_header_config__select"
+            selectTitle="Select Stock"
+            (optionSelected)="onStockSelect($event)"
+            [options]="stocksList$ | async">
+          </app-custom-select>
+      </div>
+    </div>
+    <app-stock-list></app-stock-list>
+  </div>
+</div>

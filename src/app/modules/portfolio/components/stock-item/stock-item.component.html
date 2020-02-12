@@ -1,0 +1,11 @@
+<mat-card class="stock-item">
+  <div class="stock-item_value-data">
+    <p><span class="bold">Stock</span>: {{stock.stock}}</p>
+    <p><span class="bold">Price</span>: {{stock.price | currency:'$'}}</p>
+    <p><span class="bold">Volume</span>: {{stock.volume | currency: '$'}}</p>
+  </div>
+  <div class="stock-item_sub-details">
+    <p class="stock-item_sub-details__last-updated">Updated {{stock.lastUpdated | timeAgo}}</p>
+    <button class="stock-item_sub-details__btn"  mat-mini-fab color="warn" (click)="onRemoveStock()"><fa-icon [icon]="faTrash"></fa-icon></button>
+  </div>
+</mat-card>

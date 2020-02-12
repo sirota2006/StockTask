@@ -1,0 +1,7 @@
+<button class="drop-btn" mat-button  [matMenuTriggerFor]="menu">{{selectTitle}}<fa-icon class="drop-btn__icon" [icon]="faSortDown"></fa-icon></button>
+<mat-menu [yPosition]="'below'" xPosition="after" class="drop-btn_menu" #menu="matMenu">
+  <button (click)="onSelect(option)"
+          *ngFor="let option of options"
+          mat-menu-item>{{option}}
+  </button>
+</mat-menu>

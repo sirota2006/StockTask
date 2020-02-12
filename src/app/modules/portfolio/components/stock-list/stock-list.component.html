@@ -1,0 +1,12 @@
+<div class="stocks-list" *ngIf="allStocks$ | async as stocks">
+  <ng-container *ngIf="stocks.length; else stocksEmptyRef"></ng-container>
+  <app-stock-item
+    *ngFor="let stock of stocks | orderBy:'volume'"
+    (removeStock)="onRemoveStock(stock)"
+    [stock]="stock">
+  </app-stock-item>
+  <ng-template #stocksEmptyRef>
+    <p class="stocks-list__empty">Please select stocks to preview</p>
+  </ng-template>
+</div>
+
